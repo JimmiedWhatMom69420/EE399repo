@@ -14,9 +14,9 @@ Y=np.array([30, 35, 33, 32, 34, 37, 39, 38, 36, 36, 37, 39, 42, 45, 45, 41,
 40, 39, 42, 44, 47, 49, 50, 49, 46, 48, 50, 53, 55, 54, 53])
 Fit the following model to the data with least-squares error 
 
-.. code-block:: text
+.. code-block:: latex
 
-E=√(1/n ∑_(j=1)^n▒〖(f(x_j )−y_j )^2) 〗)
+E=\sqrt(1/n)\sum^n_(j=1) (f(x_j)-y_j)^2))
 
 Part (I)
 ^^^^^^^^^^^^
