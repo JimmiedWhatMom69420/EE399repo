@@ -30,6 +30,7 @@ The graph shows the data points (blue dots) and the model function (orange line)
 The parameters of the model (A, B, C, and D) were determined by minimizing the least-squares error, which is the sum of the squared differences between the predicted values of Y and the actual values of Y for each data point. The code used the Scipy library's curve_fit function to find the optimal values of the parameters that minimize the error.
 
 Overall, the code and graph provide a visualization of the relationship between the input variable X and the output variable Y, and demonstrate how a model can be used to predict future values of Y for new values of X. The accuracy of the model can be evaluated by comparing its predictions to new data points not used in the model fitting process.
+
 Part (II)
 ^^^^^^^^^^^^
 Second question asks to use the results from the first question and fix two of the parameters and sweep through values of the other two parameters to generate a 2D loss (error) landscape. Next, I am to do all combinations of two fixed parameters and two swept parameters. I can also use something like pcolor to visualize the results in a grid. Finally, I need to determine how many minima can you find as you sweep through parameters according to the graphs?
@@ -39,6 +40,7 @@ In part (ii), the code generates a 2D loss landscape by sweeping through two of 
 The first 2D loss landscape shows the error values as a function of the parameters A and B, while C and D are fixed. The second 2D loss landscape shows the error values as a function of the parameters C and D, while A and B are fixed. The heat maps show regions of low and high error, indicating the presence of minima and maxima in the loss landscape. The number of minima that can be found as parameters are swept through depends on the specific function being fit and the values chosen for the parameter ranges. The number of minima in these landscapes depends on the specific values chosen for the parameters. 
 
 Since there are two fixed parameters and two that are being sweeped to generate a 2D loss (error) landscape for each combination of fixed parameters, there are 6 possible combinations of these from the four parameters A, B, C, D. I will generate 6 different 2D loss landscapes from these. The number of minima you can find as you sweep through parameters will depend on the specific parameter values you choose. It is possible to have multiple minima or a single minimum in each of the 2D landscapes. The code utilizes 'np.linspace()' to sweep through two parameters of choosing, and error values are calculated and stored in the 'error_vals' array using the same nested for loops and utilizing the least-squares error formula
+
 Part (III & IIII)
 ^^^^^^^^^^^^
 Question three wants to utilize the first 20 data points as training data, fit a line, parabola and 19th degree polynomial to the data. Compute the least-square error for each of these over the training points. Then compute the least square error of these models on the test data which are the remaining 10 data points.
