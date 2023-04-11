@@ -57,3 +57,7 @@ The math behind this code is the least-squares method, which is a mathematical t
 Overall, the graph represents the training and test data points along with the fitted curves for a line, a parabola, and a 19th-degree polynomial. The least-squares errors for each model on the training and test sets are also displayed.
 
 The final question follows the same steps as question three, but this time instead of using the first 20 data points as the training data, we use the first ten and the last ten data points as training data. Then, fitting the model to the test data, which would be the remaining 10 data points in the middle.
+
+Conclusion of this assignment
+^^^^^^^^^^^^
+To sum up, the polynomial regression technique has the potential to effectively forecast data points, but selecting the appropriate degree of the polynomial relies on the characteristics of the dataset and its intended use. This particular implementation demonstrated that the linear and quadratic models were successful in predicting certain subsets of the data. However, the 19th degree polynomial model had a low training error but failed to perform well on the test data. Hence, additional exploration and experimentation are necessary to ascertain the most suitable degree of polynomial for a particular dataset.
