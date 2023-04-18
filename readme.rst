@@ -5,16 +5,9 @@ EE399 - Marcel Ramirez
 =========
 
 :raw-math:`$$ \frac{s}{\sqrt{N}} $$`
-
 :raw-math:`$$ \frac{s}{\sqrt{N}} $$`
-.. math::
-   \frac{ \sum_{t=0}^{N}f(t,k) }{N}
- 
-.. math::
-   \\frac{ \\sum_{t=0}^{N}f(t,k) }{N}
+:raw-math:`$$ \frac{s}{\sqrt{N}} $$`
 
-.. math::
-   \frac{ \sum_{t=0}^{N}f(t,k) }{N}
 EE399 has a whole repository (in the near future) consisting of all projects pertaining this class. EE399 is a machine learning class, with a focus on linear regression models, gradience, and optimization problems.
 
 .. contents:: Projects (table of contents):
