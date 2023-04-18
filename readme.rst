@@ -1,5 +1,12 @@
+.. role:: raw-math(raw)
+    :format: latex html
+    
 EE399 - Marcel Ramirez
 =========
+
+:raw-math:`$$ \frac{s}{\sqrt{N}} $$`
+
+:raw-math:`$$ \frac{s}{\sqrt{N}} $$`
 .. math::
    \frac{ \sum_{t=0}^{N}f(t,k) }{N}
  
