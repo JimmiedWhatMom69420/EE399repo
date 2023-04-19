@@ -146,3 +146,8 @@ The figure below displays six different pictures displaying the first six princi
 There are a lot of variance displayed in the first six SVD modes shown. SVD appears to do a great job capturing commonly reoccurring facial features such as the mouth or the eyes. The variance of the first 6 SVD modes vary about 30%. Images of the first 6 SVD modes are shown below:
 
 .. figure:: /hw2partg.png
+
+Conclusion and Summary
+^^^^^^^^^^^^^^^^^^
+
+Correlation Matrices are very useful when finding the relationship between the variables and how close they are based on the different pixels that are in this image classificaiton. The results of the linear regression and polynomial regression show that the complexity of the model affects the performance on the test data, and overfitting can occur if the model is too complex. Singular Value Decomposition is also very useful when classifying images to reduce the dimensionality and extract certain features from the original data. Overall, this study provides valuable insights into the use of non-linear regression and different model complexities for fitting models to data.
