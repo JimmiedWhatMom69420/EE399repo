@@ -18,7 +18,7 @@ Fit the following model to the data with least-squares error
 
 .. code-block:: latex
 
-$$E=\\sqrt(1/n)\\sum^n_(j=1)(f(x_j)-y_j)^2))$$
+$$E=\\sqrt{\\frac{1}{n} \\sum^n_{j=1} (f(x_j)-y_j)^2))$$
 
 Introduction and Theory
 ^^^^^^^^^^^^
@@ -70,3 +70,68 @@ To sum up, the polynomial regression technique has the potential to effectively 
 
 Project 2 - Computing Correlation with Principal Components Analysis
 ---------------------
+
+Overview
+^^^^^^^^^^^^^^
+
+This homework assignment focuses on exploring and analyzing a dataset of images using linear algebra techniques in Python. Specifically, the dataset provided is Yalefaces.mat, which consists of 39 faces with 65 lighting scenes each (a total of 2414 images) that have been downsampled to 32x32 grayscale images. The matrix X contains the image data and is of size 1024x2414.
+
+The assignment consists of several parts. Part (a) requires computing a 100x100 correlation matrix by taking the dot product (correlation) between the first 100 images in X. Part (b) asks to identify the two most highly correlated and most uncorrelated images from the correlation matrix and plot them. Part (c) repeats part (a) but for a 10x10 correlation matrix and asks to plot the resulting matrix. Part (d) involves creating the matrix $$Y = XX^T$$ and finding the first six eigenvectors with the largest magnitude eigenvalue. Part (e) requires performing SVD on X and finding the first six principal component directions. Part (f) asks to compare the first eigenvector obtained in (d) with the first SVD mode obtained in (e) and computing the norm of the difference in their absolute values. Finally, part (g) requires computing the percentage of variance captured by each of the first six SVD modes and plotting these modes.
+
+Overall, this assignment aims to provide an opportunity to practice using linear algebra techniques to analyze a dataset of images and gain insights into the relationships between different images in the dataset.
+
+Theoretical Background and Implementation
+^^^^^^^^^^^^
+
+This assignment pertains to many linear algebra techniques utilized in image analysis and processing. Below are three key techniques:
+
+#Correlation Matrix: A correlation matrix is a square matrix that contains the correlation coefficients between pairs of variables. In the context of images, the correlation matrix can be computed by taking the dot product (correlation) between pairs of image vectors. The resulting matrix provides a measure of the similarity or dissimilarity between pairs of images in the dataset.
+.. code-block:: latex
+
+$$c_{jk}=x^T_jX_k$$
+Key Commands used to compute correlation matrix:
+Part (A)
+X_subset = X[:, :100] -> 100 x 100 matrix using the first 100 images 
+C = np.dot(X_subset.T, X_subset) -> dot product
+
+#Eigenvectors and Eigenvalues: Eigenvectors and eigenvalues are fundamental concepts in linear algebra that are commonly used in image processing and analysis. Eigenvectors are special vectors that are unchanged when a linear transformation is applied to them, except for scaling. Eigenvalues are scalars that represent the amount of scaling that occurs when a linear transformation is applied to an eigenvector. In image processing, eigenvectors and eigenvalues can be used to perform dimensionality reduction, image compression, and feature extraction.
+
+.. code-block:: latex
+
+$$Y = XX^T
+
+.. code-block:: latex
+
+Key Commands used in 
+
+#Singular Value Decomposition (SVD): SVD is a matrix decomposition technique that factorizes a matrix into three matrices: U, Σ, and V. U and V are orthogonal matrices, and Σ is a diagonal matrix containing the singular values of the original matrix. SVD is commonly used in image processing to perform dimensionality reduction, image compression, and feature extraction.
+
+.. code-block:: latex
+
+$$X = UΣV^T$$
+$$XV = UΣ$$
+
+* U and V are orthogonal matrices
+* Σ is a diagonal matrix containing the singular values of the original matrix
+
+Key commands:
+
+.. code-block:: latex
+
+eigenvalues, eigenvectors = np.linalg.eig(Y) -> utilized to compute eigenvectors and eigenvalues of Y
+U, s, Vt = np.linalg.svd(X) -> compute the SVD of X
+
+Computational Output
+^^^^^^^^^^^^^^^^^^
+
+Image below is a correlation matrix 100 x 100 using the first 100 images via dot product. It finds the difference of pictures taken of the same person but in several lighting conditions ranging light to dark.
+
+From the Correlation matrix calculated previous, the two highest correlated image pair are shown below:
+
+From the Correlation matrix calculated previous, the two lowest correlated image pair are shown below:
+
+For a very specific set of images given by the specification, (1, 313, 512, 5, 2400, 113, 1024, 87, 314, and 2005), images 87 and 314 are shown to be the most correlated to each other. The figure is shown below:
+
+The figure below displays six different pictures displaying the first six principal component directions computed by using SVD:
+
+There are a lot of variance displayed in the first six SVD modes shown. SVD appears to do a great job capturing commonly reoccurring facial features such as the mouth or the eyes. The variance of the first 6 SVD modes vary about 30%. Images of the first 6 SVD modes are shown below:
