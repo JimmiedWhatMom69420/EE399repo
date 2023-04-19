@@ -1,12 +1,12 @@
-.. role:: raw-math(raw)
+.. role:: r(raw)
     :format: latex html
     
 EE399 - Marcel Ramirez
 =========
 
-:raw-math:`$$ \frac{s}{\sqrt{N}} $$`
-:raw-math:`$$ \frac{s}{\sqrt{N}} $$`
-:raw-math:`$$ \frac{s}{\sqrt{N}} $$`
+:r:`$$ \frac{s}{\sqrt{N}} $$`
+:r:`$$ \frac{s}{\sqrt{N}} $$`
+:r:`$$ \frac{s}{\sqrt{N}} $$`
 
 EE399 has a whole repository (in the near future) consisting of all projects pertaining this class. EE399 is a machine learning class, with a focus on linear regression models, gradience, and optimization problems.
 
