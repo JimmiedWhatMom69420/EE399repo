@@ -123,26 +123,26 @@ Computational Output
 
 Image below is a correlation matrix 100 x 100 using the first 100 images via dot product. It finds the difference of pictures taken of the same person but in several lighting conditions ranging light to dark.
 
-.. figure:: /img/hw2partA.png
+.. figure:: /hw2partA.png
 
 |
 
 From the Correlation matrix calculated previous, the two highest correlated image pair are shown below:
 
-.. figure:: /img/hw2partb1.png
+.. figure:: /hw2partb1.png
 
 From the Correlation matrix calculated previous, the two lowest correlated image pair are shown below:
 
-.. figure:: /img/hw2partb2.png
+.. figure:: /hw2partb2.png
 
 For a very specific set of images given by the specification, (1, 313, 512, 5, 2400, 113, 1024, 87, 314, and 2005), images 87 and 314 are shown to be the most correlated to each other. The figure is shown below:
 
-.. figure:: /img/hw2partc.png
+.. figure:: /hw2partc.png
 
 The figure below displays six different pictures displaying the first six principal component directions computed by using SVD:
 
-.. figure:: /img/hw2parte.png
+.. figure:: /hw2parte.png
 
 There are a lot of variance displayed in the first six SVD modes shown. SVD appears to do a great job capturing commonly reoccurring facial features such as the mouth or the eyes. The variance of the first 6 SVD modes vary about 30%. Images of the first 6 SVD modes are shown below:
 
-.. figure:: /img/hw2partg.png
+.. figure:: /hw2partg.png
