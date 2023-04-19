@@ -100,13 +100,9 @@ C = np.dot(X_subset.T, X_subset) -> dot product
 
 $$Y = XX^T
 
-.. code-block:: latex
-
-Key Commands used in 
-
 #Singular Value Decomposition (SVD): SVD is a matrix decomposition technique that factorizes a matrix into three matrices: U, Σ, and V. U and V are orthogonal matrices, and Σ is a diagonal matrix containing the singular values of the original matrix. SVD is commonly used in image processing to perform dimensionality reduction, image compression, and feature extraction.
 
-.. code-block:: python
+.. code-block:: latex
 
 $$X = UΣV^T$$
 $$XV = UΣ$$
@@ -116,10 +112,8 @@ $$XV = UΣ$$
 
 Key commands:
 
-.. code-block:: python
-
-eigenvalues, eigenvectors = np.linalg.eig(Y) -> utilized to compute eigenvectors and eigenvalues of Y
-U, s, Vt = np.linalg.svd(X) -> compute the SVD of X
+*eigenvalues, eigenvectors = np.linalg.eig(Y) -> utilized to compute eigenvectors and eigenvalues of Y
+*U, s, Vt = np.linalg.svd(X) -> compute the SVD of X
 
 Computational Output
 ^^^^^^^^^^^^^^^^^^
