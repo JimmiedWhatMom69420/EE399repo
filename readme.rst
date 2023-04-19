@@ -4,14 +4,9 @@
 EE399 - Marcel Ramirez
 =========
 
-:r:`$$ \frac{s}{\sqrt{N}} $$`
-:r:`$$ \frac{s}{\sqrt{N}} $$`
-:r:`$$ \frac{s}{\sqrt{N}} $$`
-
 EE399 has a whole repository (in the near future) consisting of all projects pertaining this class. EE399 is a machine learning class, with a focus on linear regression models, gradience, and optimization problems.
 
 .. contents:: Projects (table of contents):
-Project 1 - Least Squares Error
 
 Project 1 - Least Squares Error
 ---------------------
@@ -23,7 +18,7 @@ Fit the following model to the data with least-squares error
 
 .. code-block:: latex
 
-$$E=\\sqrt(1/n)\\sum^n_(j=1) (f(x_j)-y_j)^2))$$
+$$E=\\sqrt(1/n)\\sum^n_(j=1)(f(x_j)-y_j)^2))$$
 
 Introduction and Theory
 ^^^^^^^^^^^^
@@ -72,3 +67,6 @@ The final question follows the same steps as question three, but this time inste
 Conclusion of this assignment
 ^^^^^^^^^^^^
 To sum up, the polynomial regression technique has the potential to effectively forecast data points, but selecting the appropriate degree of the polynomial relies on the characteristics of the dataset and its intended use. This particular implementation demonstrated that the linear and quadratic models were successful in predicting certain subsets of the data. However, the 19th degree polynomial model had a low training error but failed to perform well on the test data. Hence, additional exploration and experimentation are necessary to ascertain the most suitable degree of polynomial for a particular dataset.
+
+Project 2 - Computing Correlation with Principal Components Analysis
+---------------------
