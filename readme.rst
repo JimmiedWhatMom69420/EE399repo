@@ -91,9 +91,20 @@ This assignment pertains to many linear algebra techniques utilized in image ana
 
 $$c_{jk}=x^T_jX_k$$
 
+.. code-block:: latex
+
 Key Commands used to compute correlation matrix:
+
+.. code-block:: latex
+
 Part (A)
+
+.. code-block:: latex
+
 * X_subset = X[:, :100] -> 100 x 100 matrix using the first 100 images 
+
+.. code-block:: latex
+
 * C = np.dot(X_subset.T, X_subset) -> dot product
 
 #Eigenvectors and Eigenvalues: Eigenvectors and eigenvalues are fundamental concepts in linear algebra that are commonly used in image processing and analysis. Eigenvectors are special vectors that are unchanged when a linear transformation is applied to them, except for scaling. Eigenvalues are scalars that represent the amount of scaling that occurs when a linear transformation is applied to an eigenvector. In image processing, eigenvectors and eigenvalues can be used to perform dimensionality reduction, image compression, and feature extraction.
