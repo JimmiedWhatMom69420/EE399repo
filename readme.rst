@@ -93,8 +93,8 @@ $$c_{jk}=x^T_jX_k$$
 
 Key Commands used to compute correlation matrix:
 Part (A)
-X_subset = X[:, :100] -> 100 x 100 matrix using the first 100 images 
-C = np.dot(X_subset.T, X_subset) -> dot product
+* X_subset = X[:, :100] -> 100 x 100 matrix using the first 100 images 
+* C = np.dot(X_subset.T, X_subset) -> dot product
 
 #Eigenvectors and Eigenvalues: Eigenvectors and eigenvalues are fundamental concepts in linear algebra that are commonly used in image processing and analysis. Eigenvectors are special vectors that are unchanged when a linear transformation is applied to them, except for scaling. Eigenvalues are scalars that represent the amount of scaling that occurs when a linear transformation is applied to an eigenvector. In image processing, eigenvectors and eigenvalues can be used to perform dimensionality reduction, image compression, and feature extraction.
 
