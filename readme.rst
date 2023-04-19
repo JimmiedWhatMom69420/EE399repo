@@ -23,7 +23,7 @@ Fit the following model to the data with least-squares error
 
 .. code-block:: latex
 
-$$E=\sqrt(1/n)\sum^n_(j=1) (f(x_j)-y_j)^2))$$
+$$E=\\sqrt(1/n)\\sum^n_(j=1) (f(x_j)-y_j)^2))$$
 
 Introduction and Theory
 ^^^^^^^^^^^^
