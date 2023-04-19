@@ -86,9 +86,11 @@ Theoretical Background and Implementation
 This assignment pertains to many linear algebra techniques utilized in image analysis and processing. Below are three key techniques:
 
 #Correlation Matrix: A correlation matrix is a square matrix that contains the correlation coefficients between pairs of variables. In the context of images, the correlation matrix can be computed by taking the dot product (correlation) between pairs of image vectors. The resulting matrix provides a measure of the similarity or dissimilarity between pairs of images in the dataset.
+
 .. code-block:: latex
 
 $$c_{jk}=x^T_jX_k$$
+
 Key Commands used to compute correlation matrix:
 Part (A)
 X_subset = X[:, :100] -> 100 x 100 matrix using the first 100 images 
