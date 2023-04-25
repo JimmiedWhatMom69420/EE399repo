@@ -528,7 +528,7 @@ $$from mpl_toolkits.mplot3d import Axes3D$$
 $$fig = plt.figure(figsize=(10, 8))$$
 $$ax = fig.add_subplot(111, projection='3d')$$
 $$for digit in range(10):$$
-$$    ax.scatter(X_pca[y==digit, 0], X_pca[y==digit, 1], X_pca[y==digit, 2], label=str(digit))$$
+  $$ax.scatter(X_pca[y==digit, 0], X_pca[y==digit, 1], X_pca[y==digit, 2], label=str(digit))$$
 $$ax.set_xlabel('PC1')$$
 $$ax.set_ylabel('PC2')$$
 $$ax.set_zlabel('PC3')$$
