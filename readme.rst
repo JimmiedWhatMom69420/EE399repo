@@ -200,6 +200,10 @@ Support vector machines (SVMs) are a type of classifier that constructs a hyperp
 
 Decision trees are a classification technique that builds a tree-like model of decisions and their possible consequences. The tree is constructed by recursively splitting the data based on the values of the features until the leaves of the tree represent the classes of the data.
 
+Image below is a representation of how data is split in a decision tree in a Matlab example: 
+
+.. figure:: /Split.png
+
 Implementation:
 To implement the analysis of the MNIST dataset, the following steps should be taken:
 
@@ -289,6 +293,10 @@ Singular Value Decomposition (SVD):
 Singular value decomposition (SVD) is a technique used to decompose a matrix into three separate matrices. In this analysis, we used SVD to determine the rank of the digit space and how many modes are necessary for good image reconstruction.
 
 The SVD of a matrix X is given by X = UΣV^T, where U and V are orthogonal matrices and Σ is a diagonal matrix of singular values. The singular values in Σ are sorted in decreasing order, and the rank of X is equal to the number of non-zero singular values.
+
+The image below shows an example of an SVM utilizing Covers Theorem:
+
+.. figure:: /SVMEx.png
 
 Logistic Regression:
 
