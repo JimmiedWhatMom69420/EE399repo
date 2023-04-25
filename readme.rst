@@ -575,6 +575,14 @@ tree = DecisionTreeClassifier(max_depth=10)$$
 Computational Output
 ^^^^^^^^^^^^^^^^^^
 
+Graph of the Single Value Spectrum
+
+.. figure:: /SingleValueSpec.png
+
+Visual Matrix
+
+.. figure:: /visMatrix.png 
+
 Conclusion and Summary
 ^^^^^^^^^^^^^^^^^^
 
