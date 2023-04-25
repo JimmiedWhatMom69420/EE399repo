@@ -1,6 +1,3 @@
-.. role:: r(raw)
-    :format: latex html
-    
 EE399 - Marcel Ramirez
 =========
 
@@ -503,7 +500,6 @@ As we can see, the SVM classifier achieves a high accuracy of 0.977 on the test 
 It's worth noting that since 2014, deep learning methods, particularly convolutional neural networks (CNNs), have become the state-of-the-art for image classification tasks such as MNIST.
 
 Part (X)
-
 ^^^^^^^^^^^^
 
 To compare the performance of LDA, SVM, and decision trees on the hardest and easiest pair of digits to separate, we can train and test these classifiers on the relevant subset of the MNIST dataset and evaluate their classification accuracy.
@@ -558,11 +554,11 @@ SVM: We also compared the performance of LDA with that of SVM and decision trees
 $$from sklearn.svm import SVC$$
 
 # Perform SVM
-$$svm = SVC(kernel='linear')$$
-$$svm.fit(X_train, y_train)$$
+svm = SVC(kernel='linear')
+svm.fit(X_train, y_train)
 
 # Predict on test set
-$$y_pred = svm.predict(X_test)$$
+y_pred = svm.predict(X_test)
 
 Decision Trees: Decision trees are another popular classifier that works by recursively splitting the data into subsets based on the features that provide the most information gain. The following code was used to perform decision trees:
 
