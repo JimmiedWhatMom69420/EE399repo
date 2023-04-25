@@ -200,6 +200,10 @@ Support vector machines (SVMs) are a type of classifier that constructs a hyperp
 
 Decision trees are a classification technique that builds a tree-like model of decisions and their possible consequences. The tree is constructed by recursively splitting the data based on the values of the features until the leaves of the tree represent the classes of the data.
 
+Image below is a representation of how data is split in a decision tree in a Matlab example: 
+
+.. figure:: /Split.png
+
 Implementation:
 To implement the analysis of the MNIST dataset, the following steps should be taken:
 
@@ -219,27 +223,25 @@ The implementation can be done using Python and libraries such as NumPy, Matplot
 Part (I)
 ^^^^^^^^^^^^
 
-Sure, here's a Python code that performs an SVD analysis of the MNIST data set:
+SVD analysis of the MNIST data set:
 
-python
-Copy code
-import numpy as np
-from sklearn.datasets import fetch_openml
-from sklearn.decomposition import TruncatedSVD
+$$import numpy as np$$
+$$from sklearn.datasets import fetch_openml$$
+$$from sklearn.decomposition import TruncatedSVD$$
 
 # Load MNIST dataset
-mnist = fetch_openml('mnist_784')
+$$mnist = fetch_openml('mnist_784')$$
 
 # Extract image and label data
-X = mnist.data
-y = mnist.target
+$$X = mnist.data$$
+$$y = mnist.target$$
 
 # Reshape image data into column vectors
-X = X.T
+$$X = X.T$$
 
 # Perform SVD analysis
-svd = TruncatedSVD(n_components=10, random_state=42)
-X_svd = svd.fit_transform(X)
+$$svd = TruncatedSVD(n_components=10, random_state=42)$$
+$$X_svd = svd.fit_transform(X)$$
 
 # Print the explained variance ratios
 print("Explained variance ratios:", svd.explained_variance_ratio_)
@@ -256,6 +258,11 @@ Important Concept - SVD Analysis:
 Singular Value Decomposition (SVD) is a matrix factorization method that can be used to analyze and compress data. It decomposes a matrix into three matrices: U, Σ, and V, such that X = UΣVᵀ. U and V are orthogonal matrices, and Σ is a diagonal matrix containing the singular values of X.
 
 The singular values represent the amount of variance in the data captured by each principal component. We can use the SVD to perform dimensionality reduction by selecting the top k singular values and their corresponding columns in U and V.
+
+The image below shows an example of an SVM utilizing Covers Theorem:
+
+.. figure:: /SVMEx.png
+
 
 Important Commands:
 
@@ -290,6 +297,10 @@ Singular value decomposition (SVD) is a technique used to decompose a matrix int
 
 The SVD of a matrix X is given by X = UΣV^T, where U and V are orthogonal matrices and Σ is a diagonal matrix of singular values. The singular values in Σ are sorted in decreasing order, and the rank of X is equal to the number of non-zero singular values.
 
+The image below shows an example of an SVM utilizing Covers Theorem:
+
+.. figure:: /SVMEx.png
+
 Logistic Regression:
 
 Logistic regression is a statistical method used to analyze a dataset in which there are one or more independent variables that determine an outcome. In this analysis, we used logistic regression to classify the images of handwritten digits into their corresponding labels.
@@ -320,6 +331,7 @@ Next, we can use a machine learning model to classify the images into their corr
 
 Here are some performance metrics for the logistic regression model:
 
+---------------------------------
 Metric	Training Set	Test Set
 Accuracy	0.9266	0.9219
 Precision(weighted)	0.9266	0.9223
@@ -463,21 +475,20 @@ Part (IX)
 
 To evaluate how well SVM and decision tree classifiers separate between all ten digits in the MNIST dataset, we can train and test these classifiers on the dataset and evaluate their classification accuracy. 
 
-$$
-from sklearn.svm import SVC
-from sklearn.tree import DecisionTreeClassifier
+$$from sklearn.svm import SVC$$
+$$from sklearn.tree import DecisionTreeClassifier$$
 
-# train SVM classifier and evaluate its accuracy
-svm = SVC()
-svm.fit(X_train, y_train)
-svm_acc = svm.score(X_test, y_test)
-print('SVM accuracy:', svm_acc)
+# train SVM classifier and evaluate its accuracy$$
+$$svm = SVC()$$
+$$svm.fit(X_train, y_train)$$
+$$svm_acc = svm.score(X_test, y_test)$$
+$$print('SVM accuracy:', svm_acc)$$
 
-# train decision tree classifier and evaluate its accuracy
-dt = DecisionTreeClassifier()
-dt.fit(X_train, y_train)
-dt_acc = dt.score(X_test, y_test)
-print('Decision tree accuracy:', dt_acc)$$
+# train decision tree classifier and evaluate its accuracy$$
+$$dt = DecisionTreeClassifier()$$
+$$dt.fit(X_train, y_train)$$
+$$dt_acc = dt.score(X_test, y_test)$$
+$$print('Decision tree accuracy:', dt_acc)$$
 
 In this code, we first import the SVC class from the sklearn.svm module and the DecisionTreeClassifier class from the sklearn.tree module. We then train an SVM and a decision tree classifier on the training data using their default hyperparameters. We evaluate their accuracy on the test data using the score method and print the results.
 
@@ -508,25 +519,25 @@ PCA: We used the PCA class from scikit-learn library to perform PCA on the data.
 $$from sklearn.decomposition import PCA
 
 # Perform PCA
-pca = PCA(n_components=3)
-X_pca = pca.fit_transform(X)$$
+$$pca = PCA(n_components=3)$$
+$$X_pca = pca.fit_transform(X)$$
 
 3D Visualization: We used the matplotlib library to create a 3D plot of the PCA-transformed data. We also used the scatter function to color the points by their digit label. The following code was used to create the plot:
 
 $$
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+$$import matplotlib.pyplot as plt$$
+$$from mpl_toolkits.mplot3d import Axes3D$$
 
 # Create 3D plot
-fig = plt.figure(figsize=(10, 8))
-ax = fig.add_subplot(111, projection='3d')
-for digit in range(10):
-    ax.scatter(X_pca[y==digit, 0], X_pca[y==digit, 1], X_pca[y==digit, 2], label=str(digit))
-ax.set_xlabel('PC1')
-ax.set_ylabel('PC2')
-ax.set_zlabel('PC3')
-ax.legend()
-plt.show()$$
+$$fig = plt.figure(figsize=(10, 8))$$
+$$ax = fig.add_subplot(111, projection='3d')$$
+$$for digit in range(10):$$
+$$    ax.scatter(X_pca[y==digit, 0], X_pca[y==digit, 1], X_pca[y==digit, 2], label=str(digit))$$
+$$ax.set_xlabel('PC1')$$
+$$ax.set_ylabel('PC2')$$
+$$ax.set_zlabel('PC3')$$
+$$ax.legend()$$
+$$plt.show()$$
 
 Linear Classification:
 
@@ -535,34 +546,31 @@ After visualizing the data in a reduced dimensionality, we built linear classifi
 LDA: We used the LinearDiscriminantAnalysis class from scikit-learn library to perform LDA. The following code was used to perform LDA:
 
 $$
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+$$from sklearn.discriminant_analysis import LinearDiscriminantAnalysis$$
 
 # Perform LDA
-lda = LinearDiscriminantAnalysis()
-lda.fit(X_train, y_train)
-
-# Predict on test set
-y_pred = lda.predict(X_test)$$
+$$lda = LinearDiscriminantAnalysis()$$
+$$lda.fit(X_train, y_train)$$
+$$# Predict on test set$$
+$$y_pred = lda.predict(X_test)$$
 
 SVM: We also compared the performance of LDA with that of SVM and decision trees on different pairs of digits. SVM is a powerful classifier that tries to find the optimal separating hyperplane between the classes. The following code was used to perform SVM:
 
-$$
-from sklearn.svm import SVC
+$$from sklearn.svm import SVC$$
 
 # Perform SVM
-svm = SVC(kernel='linear')
-svm.fit(X_train, y_train)
+$$svm = SVC(kernel='linear')$$
+$$svm.fit(X_train, y_train)$$
 
 # Predict on test set
-y_pred = svm.predict(X_test)$$
+$$y_pred = svm.predict(X_test)$$
 
 Decision Trees: Decision trees are another popular classifier that works by recursively splitting the data into subsets based on the features that provide the most information gain. The following code was used to perform decision trees:
 
-$$
-from sklearn.tree import DecisionTreeClassifier
+$$from sklearn.tree import DecisionTreeClassifier$$
 
 # Perform decision trees
-tree = DecisionTreeClassifier(max_depth=10)$$
+$$tree = DecisionTreeClassifier(max_depth=10)$$
 
 Computational Output
 ^^^^^^^^^^^^^^^^^^
