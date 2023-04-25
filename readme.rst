@@ -494,16 +494,15 @@ In this code, we first import the SVC class from the sklearn.svm module and the 
 
 Here's an example output we obtained using this code:
 
-$$
-SVM accuracy: 0.9767
-Decision tree accuracy: 0.8728$$
+
+$$SVM accuracy: 0.9767$$
+$$Decision tree accuracy: 0.8728$$
 
 As we can see, the SVM classifier achieves a high accuracy of 0.977 on the test data, indicating that it is a good classifier for separating all ten digits in the MNIST dataset. On the other hand, the decision tree classifier achieves a lower accuracy of 0.873 on the test data, indicating that it is not as good as the SVM classifier for this task.
 
 It's worth noting that since 2014, deep learning methods, particularly convolutional neural networks (CNNs), have become the state-of-the-art for image classification tasks such as MNIST.
 
 Part (X)
-
 ^^^^^^^^^^^^
 
 To compare the performance of LDA, SVM, and decision trees on the hardest and easiest pair of digits to separate, we can train and test these classifiers on the relevant subset of the MNIST dataset and evaluate their classification accuracy.
@@ -545,7 +544,6 @@ After visualizing the data in a reduced dimensionality, we built linear classifi
 
 LDA: We used the LinearDiscriminantAnalysis class from scikit-learn library to perform LDA. The following code was used to perform LDA:
 
-$$
 $$from sklearn.discriminant_analysis import LinearDiscriminantAnalysis$$
 
 # Perform LDA
