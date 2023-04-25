@@ -583,6 +583,14 @@ Visual Matrix
 
 .. figure:: /visMatrix.png 
 
+.. figure:: /1HW3EE399.png 
+
+.. figure:: /2HW3EE399.png 
+
+.. figure:: /3HW3EE399.png 
+
+.. figure:: /4HW3EE399.png 
+
 Conclusion and Summary
 ^^^^^^^^^^^^^^^^^^
 
