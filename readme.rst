@@ -503,6 +503,7 @@ As we can see, the SVM classifier achieves a high accuracy of 0.977 on the test 
 It's worth noting that since 2014, deep learning methods, particularly convolutional neural networks (CNNs), have become the state-of-the-art for image classification tasks such as MNIST.
 
 Part (X)
+
 ^^^^^^^^^^^^
 
 To compare the performance of LDA, SVM, and decision trees on the hardest and easiest pair of digits to separate, we can train and test these classifiers on the relevant subset of the MNIST dataset and evaluate their classification accuracy.
